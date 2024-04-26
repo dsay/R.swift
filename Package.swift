@@ -34,7 +34,7 @@ let package = Package(
             .target(name: "RswiftParsers"),
             .target(name: "RswiftGenerators"),
             .product(name: "ArgumentParser", package: "swift-argument-parser"),
-        ]),
+        ],resources: [.copy("PrivacyInfo.xcprivacy")]),
 
         .plugin(name: "RswiftGenerateInternalResources", capability: .buildTool(), dependencies: ["rswift"]),
         .plugin(name: "RswiftGeneratePublicResources", capability: .buildTool(), dependencies: ["rswift"]),
