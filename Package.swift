@@ -22,7 +22,7 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.1.0"),
     ],
     targets: [
-        .target(name: "RswiftResources"),
+        .target(name: "RswiftResources", resources: [.copy("PrivacyInfo.xcprivacy")]),
         .target(name: "RswiftGenerators", dependencies: ["RswiftResources"]),
         .target(name: "RswiftParsers", dependencies: ["RswiftResources", "XcodeEdit"]),
 
